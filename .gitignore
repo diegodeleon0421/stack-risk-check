@@ -1,0 +1,22 @@
+# Nothing operational belongs in this repository.
+*.env
+.env*
+*.token
+.admin_token
+wrangler.toml
+.wrangler/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Private data and pipeline output — see README "Scope"
+events.jsonl
+enriched.jsonl
+eol.json
+metrics.jsonl
+build_stats.json
+originality.json
+seen_ids.json
+dist/
+issues/
