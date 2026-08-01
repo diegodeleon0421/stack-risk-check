@@ -1,0 +1,47 @@
+name: "Missing technology"
+description: Something you actually run that the tool does not recognise.
+title: "[Missing] "
+labels: ["missing-technology", "coverage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Coverage is strongest for languages, databases, infrastructure and developer tooling, and
+        weakest for business SaaS. Knowing what people actually run and get `unknown` for is how
+        that gap gets closed in the right order.
+  - type: input
+    id: name
+    attributes:
+      label: Technology name
+      description: Write it the way you would naturally type it — alias handling is often the real gap.
+      placeholder: "k3s / OpenSearch / Sidekiq Enterprise"
+    validations: {required: true}
+  - type: input
+    id: version
+    attributes:
+      label: Version you run (if applicable)
+      placeholder: "1.29"
+  - type: input
+    id: source
+    attributes:
+      label: Where its support dates are published, if you know
+      description: A vendor lifecycle page makes this fixable immediately.
+      placeholder: https://
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Language or runtime
+        - Database or data store
+        - Cloud or infrastructure
+        - Developer tooling
+        - Business SaaS
+        - Operating system
+        - Other
+    validations: {required: true}
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else
+      description: Do you run it in production? Is a deadline coming that you know of?
