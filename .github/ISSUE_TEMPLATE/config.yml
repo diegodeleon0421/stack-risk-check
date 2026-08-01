@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Wrong support date at the source
+    url: https://github.com/endoflife-date/endoflife.date/issues
+    about: If a date is wrong upstream, endoflife.date maintains it and deserves the correction. Open an issue here too if this tool is misrepresenting data that is correct upstream.
+  - name: Security vulnerability
+    url: https://github.com/SECURITY.md
+    about: Please report privately via GitHub security advisories rather than a public issue. See SECURITY.md.
