@@ -1,0 +1,43 @@
+name: "False match — wrong product or wrong dates"
+description: The tool resolved your input to the wrong product, or reported dates that disagree with the vendor.
+title: "[False match] "
+labels: ["false-match", "accuracy"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This is the most serious kind of bug in this project.** A confidently wrong answer is
+        worse than no answer, because someone may act on it. Please report it even if you are not
+        certain — being told the tool is wrong is more useful than being told it is right.
+  - type: input
+    id: input
+    attributes:
+      label: What you typed
+      description: Exactly as entered, including the version.
+      placeholder: jquery-file-upload
+    validations: {required: true}
+  - type: textarea
+    id: got
+    attributes:
+      label: What the tool reported
+      description: Severity, product name and dates shown.
+      placeholder: "clear — matched 'jquery', said no upcoming end-of-life date"
+    validations: {required: true}
+  - type: textarea
+    id: expected
+    attributes:
+      label: What it should have reported, and why
+      placeholder: "It should match blueimp/jQuery-File-Upload, which was archived 2026-04-08. It is a different project from jQuery."
+    validations: {required: true}
+  - type: input
+    id: source
+    attributes:
+      label: Link to the vendor's own end-of-life page or announcement
+      description: The single most helpful thing you can include.
+      placeholder: https://
+  - type: input
+    id: url
+    attributes:
+      label: Result link (optional)
+      description: The tool produces a shareable link containing only the names you typed.
+      placeholder: https://shutdown-radar.pages.dev/check?q=...
